@@ -1,7 +1,7 @@
 /**
  * Organize your blocks in groups
  */
-//% color="#AA278D"
+//% color="#AA278D" block="BitMaker"
 //% groups="['Fruits', 'Veggies']"
 namespace food {
     //% block
