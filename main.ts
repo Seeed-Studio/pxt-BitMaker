@@ -9,14 +9,15 @@ enum GPIOs {
  * Provides access to BitMaker micro:bit functionality.
  */
 //% color=190 icon="\uf126" block="BitMaker"
-namespace sample {
+namespace BitMaker {
 
-    //% block
-    //% gesture.fieldEditor="gridpicker"
-    //% gesture.fieldOptions.width=60
-    //% gesture.fieldOptions.columns=1
-    //% gesture.fieldOptions.tooltips="false"
-    export function onGesture(gesture: GPIOs) {
+    //% blockId="read_digital_in" block= "digital pin $pin|is $high"
+    //% pin.fieldEditor="gridpicker"
+    //% pin.fieldOptions.width=60
+    //% pin.fieldOptions.columns=1
+    //% pin.fieldOptions.tooltips="false"
+    //% high.shadow="toggleHighLow"
+    export function read_digital_in(pin: DigitalPin, high: boolean): boolean {
 
     }
 
