@@ -1,18 +1,18 @@
 /**
- * Organize your blocks in groups
+ * Provides access to BitMaker micro:bit functionality.
  */
-//% color="#AA278D" block="BitMaker"
+//% color=190 weight=100 icon="\f0ad" block="Basic Blocks"
 //% groups="['Fruits', 'Veggies']"
 namespace food {
     //% block
     //% group="Veggies"
-    export function potato() {
+    export function potatoes() {
 
     }
 
     //% block
     //% group="Veggies"
-    export function bean() {
+    export function beanes() {
 
     }
 
