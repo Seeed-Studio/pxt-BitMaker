@@ -16,8 +16,7 @@ namespace BitMaker {
     //% pin.fieldOptions.width=60
     //% pin.fieldOptions.columns=1
     //% pin.fieldOptions.tooltips="false"
-    //% high.shadow="toggleHighLow"
-    export function read_digital_in(pin: GPIOs, high: boolean): boolean {
+    export function highLow(high: boolean): boolean {
         return high;
     }
 }
