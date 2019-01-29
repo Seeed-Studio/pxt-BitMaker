@@ -1,13 +1,13 @@
 /**
  * Provides access to BitMaker micro:bit functionality.
  */
-//% color=190 weight=100 icon="\f0ad" block="Basic Blocks"
+//% color=190 icon="\f0ad" block="Basic Blocks"
 //% groups="['Fruits', 'Veggies']"
 namespace food {
     //% block
     //% group="Veggies"
     export function potatoes() {
-
+        food.potatoes()
     }
 
     //% block
