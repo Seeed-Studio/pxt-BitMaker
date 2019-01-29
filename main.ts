@@ -1,8 +1,7 @@
 /**
  * Provides access to BitMaker micro:bit functionality.
  */
-//% color=190 weight=100 icon="\f0ad" block="Basic Blocks"
-//% groups="['Fruits', 'Veggies']"
+//% color=190 icon="\f2a1" block="BitMaker"
 namespace food {
     //% block
     //% group="Veggies"
