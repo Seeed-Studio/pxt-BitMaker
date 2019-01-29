@@ -11,7 +11,7 @@ enum GPIOs {
 //% color=190 icon="\uf126" block="BitMaker"
 namespace BitMaker {
 
-    //% blockId="read_digital_in" block= "digital pin $pin|is $high"
+    //% block= "digital pin $pin|is $high"
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.width=60
     //% pin.fieldOptions.columns=1
