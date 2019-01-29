@@ -11,11 +11,11 @@ enum GPIOs {
 //% color=190 icon="\uf126" block="BitMaker"
 
 namespace sample {
-    //% block="test$gesture"
+    //% block="test$pin"
     //% gesture.fieldEditor="gridpicker"
     //% gesture.fieldOptions.width=60
     //% gesture.fieldOptions.columns=1
     //% gesture.fieldOptions.tooltips="false"
-    export function onGesture(gesture: GPIOs) {
+    export function onGesture(pin: GPIOs) {
     }
 }
