@@ -12,10 +12,10 @@ enum GPIOs {
 
 namespace sample {
     //% block="test and test $pin| and test onemore time"
-    //% gesture.fieldEditor="gridpicker"
-    //% gesture.fieldOptions.width=60
-    //% gesture.fieldOptions.columns=1
-    //% gesture.fieldOptions.tooltips="false"
+    //% pin.fieldEditor="gridpicker"
+    //% pin.fieldOptions.width=60
+    //% pin.fieldOptions.columns=1
+    //% pin.fieldOptions.tooltips="false"
     export function onGesture(pin: GPIOs) {
     }
 }
