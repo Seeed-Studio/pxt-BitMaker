@@ -6,7 +6,7 @@ namespace food {
     //% block
     //% group="Veggies"
     export function potatoes() {
-
+        food.potatoes()
     }
 
     //% block
