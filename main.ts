@@ -11,11 +11,13 @@ enum GPIOs {
 //% color=190 icon="\uf126" block="BitMaker"
 
 namespace sample {
-    //% block="test and test $pin| and onemoretest onemore time"
+    //% block="digital pin $pin| is %high"
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.width=60
     //% pin.fieldOptions.columns=1
     //% pin.fieldOptions.tooltips="false"
-    export function onGesture(pin: GPIOs) {
+    //% high.shadow="toggleHighLow"
+    export function digital_read_pin(pin: DigitalPin, high: boolean): boolean {
+        return high;
     }
 }
