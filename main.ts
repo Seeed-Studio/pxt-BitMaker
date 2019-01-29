@@ -1,30 +1,23 @@
+enum  GPIOs {
+    //% block="P0"
+    P0, 
+    //% block="P1"
+    P1, 
+
+}
 /**
  * Provides access to BitMaker micro:bit functionality.
  */
-//% color=190 icon="\f0ad" block="Basic Blocks"
-//% groups="['Fruits', 'Veggies']"
-namespace food {
-    //% block
-    //% group="Veggies"
-    export function potatoes() {
-        food.potatoes()
-    }
+
+namespace sample {
 
     //% block
-    //% group="Veggies"
-    export function beanes() {
+    //% gesture.fieldEditor="gridpicker"
+    //% gesture.fieldOptions.width=60
+    //% gesture.fieldOptions.columns=1
+    //% gesture.fieldOptions.tooltips="false"
+    export function onGesture(gesture: GPIOs) {
 
     }
 
-    //% block
-    //% group="Fruits"
-    export function apple() {
-
-    }
-
-    //% block
-    //% group="Fruits"
-    export function banana() {
-
-    }
 }
