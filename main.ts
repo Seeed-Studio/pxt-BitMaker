@@ -1,7 +1,7 @@
 /**
  * Provides access to BitMaker micro:bit functionality.
  */
-//% color=190 icon="\uf2a1" block="BitMaker"
+//% color=190 icon="\uf126" block="BitMaker"
 namespace food {
     //% block
     //% group="Veggies"
