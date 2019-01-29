@@ -11,7 +11,7 @@ enum GPIOs {
 //% color=190 icon="\uf126" block="BitMaker"
 
 namespace sample {
-    //% block="test and test $pin and test and test"
+    //% block="test and test $pin| and test and test"
     //% gesture.fieldEditor="gridpicker"
     //% gesture.fieldOptions.width=60
     //% gesture.fieldOptions.columns=1
