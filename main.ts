@@ -20,5 +20,4 @@ namespace BitMaker {
     export function read_digital_in(pin: DigitalPin, high: boolean): boolean {
         return high;
     }
-
 }
