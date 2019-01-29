@@ -8,7 +8,7 @@ enum GPIOs {
 /*
  * Provides access to BitMaker micro: bit functionality.
  */
-//% color=190 icon="\uf126" block="BitMaker"
+//% color=190 icon="\uf126" block= "BitMaker"
 
 namespace sample {
     //% block="digital pin $pin| is %high"
@@ -17,7 +17,7 @@ namespace sample {
     //% pin.fieldOptions.columns=1
     //% pin.fieldOptions.tooltips="false"
     //% high.shadow="toggleHighLow"
-    export function digital_read_pin(pin: DigitalPin, high: boolean): boolean {
+    export function digital_read_pin(pin: GPIOs, high: boolean): boolean {
         return high;
     }
 }
