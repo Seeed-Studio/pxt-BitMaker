@@ -24,13 +24,14 @@ namespace sample {
         let Din_stat: number;
         if (pin == available_pins.P0) {
             Din_stat = pins.digitalReadPin(DigitalPin.P0);
-            if (high == true && Din_stat == 1) {
-                return toggle;
-            }
-            toggle = pins.digitalReadPin(DigitalPin.P0);
-        } else if (condition) {
-
+        } else if (pin == available_pins.P1) {
+            Din_stat = pins.digitalReadPin(DigitalPin.P1);
         }
-        return toggle;
+
+        if ((high == true && Din_stat == 1) || (high == false && Din_stat == 0)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
