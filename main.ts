@@ -20,6 +20,7 @@ enum AnalogPort {
     P2
 }
 
+
 /**
  * Provides access to BitMaker for micro: bit functionality.
  */
