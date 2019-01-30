@@ -53,9 +53,9 @@ namespace BitMaker {
     */
     //% blockId=set_Dout
     //% block="set digital pin $Dout| to %high"
-    //% Din.fieldEditor="gridpicker"
-    //% Din.fieldOptions.width=200
-    //% Din.fieldOptions.columns=3
+    //% Dout.fieldEditor="gridpicker"
+    //% Dout.fieldOptions.width=200
+    //% Dout.fieldOptions.columns=3
     //% toggle.shadow="toggleHighLow"
     //% toggle.defl="true"
     export function set_Dout(Dout: GrovePort, toggle: boolean) {
