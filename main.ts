@@ -16,10 +16,11 @@ enum GrovePort {
  */
 //% color=190 icon="\uf126" block= "BitMaker"
 
-namespace sample {
+namespace BitMaker {
     /**
-     * Render a boolean as a high/low toggle
+     * read the status of a digital input
      */
+    //% blockId=read_Din
     //% block="digital pin $Din| is %high"
     //% Din.fieldEditor="gridpicker"
     //% Din.fieldOptions.width=200
@@ -44,6 +45,37 @@ namespace sample {
             return true;
         } else {
             return false;
+        }
+    }
+
+    /**
+    * read the status of a digital input
+    */
+    //% blockId=set_Dout
+    //% block="set digital pin $Dout| to %high"
+    //% Din.fieldEditor="gridpicker"
+    //% Din.fieldOptions.width=200
+    //% Din.fieldOptions.columns=3
+    //% toggle.shadow="toggleHighLow"
+    //% toggle.defl="true"
+    export function set_Dout(Dout: GrovePort, toggle: boolean) {
+        let Dout_stat: number;
+        if (toggle == true) {
+            Dout_stat = 1;
+        } else {
+            Dout_stat = 0;
+        }
+
+        if (Dout == GrovePort.P0) {
+            pins.digitalWritePin(DigitalPin.P0, Dout_stat);
+        } else if (Dout == GrovePort.P1) {
+            pins.digitalWritePin(DigitalPin.P1, Dout_stat);
+        } else if (Dout == GrovePort.P2) {
+            pins.digitalWritePin(DigitalPin.P2, Dout_stat);
+        } else if (Dout == GrovePort.P8) {
+            pins.digitalWritePin(DigitalPin.P8, Dout_stat);
+        } else if (Dout == GrovePort.P16) {
+            pins.digitalWritePin(DigitalPin.P16, Dout_stat);
         }
     }
 }
