@@ -22,7 +22,7 @@ namespace sample {
      */
     //% block="digital pin $Din| is %high"
     //% Din.fieldEditor="gridpicker"
-    //% Din.fieldOptions.width=250
+    //% Din.fieldOptions.width=200
     //% Din.fieldOptions.columns=3
     //% high.shadow="toggleHighLow"
     //% high.defl="true"
