@@ -20,8 +20,9 @@ enum AnalogPort {
     P2
 }
 
-/*
- * Provides access to BitMaker micro: bit functionality.
+
+/**
+ * Provides access to BitMaker for micro: bit functionality.
  */
 //% color=190 icon="\uf126" block= "BitMaker"
 
@@ -106,5 +107,25 @@ namespace BitMaker {
             Ain_value = pins.analogReadPin(AnalogPin.P2);
         }
         return Ain_value;
+    }
+
+    /**
+    * write value to the analog ports
+    */
+    //% blockId=write_analog
+    //% block="analog write pin $A_port| to $value"
+    //% A_port.fieldEditor="gridpicker"
+    //% A_port.fieldOptions.width=200
+    //% A_port.fieldOptions.columns=3
+    //% value.min=0 value.max=1023
+    //% value.defl=1023
+    export function write_analog(A_port: AnalogPort, value: number) {
+        if (A_port == AnalogPort.P0) {
+            pins.analogWritePin(AnalogPin.P0, value);
+        } else if (A_port == AnalogPort.P1) {
+            pins.analogWritePin(AnalogPin.P1, value);
+        } else if (A_port == AnalogPort.P2) {
+            pins.analogWritePin(AnalogPin.P2, value);
+        }
     }
 }
