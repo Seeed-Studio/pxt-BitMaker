@@ -56,11 +56,11 @@ namespace BitMaker {
     //% Dout.fieldEditor="gridpicker"
     //% Dout.fieldOptions.width=200
     //% Dout.fieldOptions.columns=3
-    //% toggle.shadow="toggleHighLow"
-    //% toggle.defl="true"
-    export function set_Dout(Dout: GrovePort, toggle: boolean) {
+    //% high.shadow="toggleHighLow"
+    //% high.defl="true"
+    export function set_Dout(Dout: GrovePort, high: boolean) {
         let Dout_stat: number;
-        if (toggle == true) {
+        if (high == true) {
             Dout_stat = 1;
         } else {
             Dout_stat = 0;
