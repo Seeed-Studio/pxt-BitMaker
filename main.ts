@@ -11,8 +11,17 @@ enum GrovePort {
     P16
 }
 
-/*
- * Provides access to BitMaker micro: bit functionality.
+enum AnalogPort {
+    //% block="P0"
+    P0,
+    //% block="P1"
+    P1,
+    //% block="P2"
+    P2
+}
+
+/**
+ * Provides access to BitMaker for micro: bit functionality.
  */
 //% color=190 icon="\uf126" block= "BitMaker"
 
@@ -49,7 +58,7 @@ namespace BitMaker {
     }
 
     /**
-    * read the status of a digital input
+    * set the status of a digital output to high or low
     */
     //% blockId=set_Dout
     //% block="set digital pin $Dout| to %high"
@@ -76,6 +85,46 @@ namespace BitMaker {
             pins.digitalWritePin(DigitalPin.P8, Dout_stat);
         } else if (Dout == GrovePort.P16) {
             pins.digitalWritePin(DigitalPin.P16, Dout_stat);
+        }
+    }
+
+    /**
+    * read the analog inputs
+    */
+    //% blockId=read_Ain
+    //% block="analog read pin $Ain"
+    //% Ain.fieldEditor="gridpicker"
+    //% Ain.fieldOptions.width=200
+    //% Ain.fieldOptions.columns=3
+    export function read_Ain(Ain: AnalogPort): number {
+        let Ain_value: number;
+        if (Ain == AnalogPort.P0) {
+            Ain_value = pins.analogReadPin(AnalogPin.P0);
+        } else if (Ain == AnalogPort.P1) {
+            Ain_value = pins.analogReadPin(AnalogPin.P1);
+        } else if (Ain == AnalogPort.P2) {
+            Ain_value = pins.analogReadPin(AnalogPin.P2);
+        }
+        return Ain_value;
+    }
+
+    /**
+    * write value to the analog ports
+    */
+    //% blockId=write_analog
+    //% block="analog write pin $A_port| to $value"
+    //% A_port.fieldEditor="gridpicker"
+    //% A_port.fieldOptions.width=200
+    //% A_port.fieldOptions.columns=3
+    //% value.min=0 value.max=1023
+    //% value.defl=1023
+    export function write_analog(A_port: AnalogPort, value: number) {
+        if (A_port == AnalogPort.P0) {
+            pins.analogWritePin(AnalogPin.P0, value);
+        } else if (A_port == AnalogPort.P1) {
+            pins.analogWritePin(AnalogPin.P1, value);
+        } else if (A_port == AnalogPort.P2) {
+            pins.analogWritePin(AnalogPin.P2, value);
         }
     }
 }
