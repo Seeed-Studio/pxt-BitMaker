@@ -1,7 +1,7 @@
 enum available_pins {
     //% block="P0"
     P0 = 0,
-    //% block="P1"
+    //% block="【P1】"
     P1 = 1
 }
 
@@ -14,17 +14,18 @@ namespace sample {
     /**
      * Render a boolean as a high/low toggle
      */
-    //% block="digital pin $pin| is %high"
-    //% pin.fieldEditor="gridpicker"
-    //% pin.fieldOptions.width=60
-    //% pin.fieldOptions.columns=1
-    //% pin.fieldOptions.tooltips="false"
+    //% block="digital pin $Din| is %high"
+    //% Din.fieldEditor="gridpicker"
+    //% Din.fieldOptions.width=60
+    //% Din.fieldOptions.columns=2
+    //% Din.fieldOptions.tooltips="false"
     //% high.shadow="toggleHighLow"
-    export function read_Din(pin: available_pins, high: boolean): boolean {
+    //% high.defl="true"
+    export function read_Din(Din: available_pins, high: boolean): boolean {
         let Din_stat: number;
-        if (pin == available_pins.P0) {
+        if (Din == available_pins.P0) {
             Din_stat = pins.digitalReadPin(DigitalPin.P0);
-        } else if (pin == available_pins.P1) {
+        } else if (Din == available_pins.P1) {
             Din_stat = pins.digitalReadPin(DigitalPin.P1);
         }
 
