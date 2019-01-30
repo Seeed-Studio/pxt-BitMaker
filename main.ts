@@ -1,7 +1,7 @@
 enum available_pins {
     //% block="P0"
     P0 = 0,
-    //% block="P1"
+    //% block="【P1】"
     P1 = 1
 }
 
