@@ -24,7 +24,6 @@ namespace sample {
     //% Din.fieldEditor="gridpicker"
     //% Din.fieldOptions.width=100
     //% Din.fieldOptions.columns=2
-    //% Din.fieldOptions.tooltips="false"
     //% high.shadow="toggleHighLow"
     //% high.defl="true"
     export function read_Din(Din: GrovePort, high: boolean): boolean {
