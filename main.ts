@@ -25,7 +25,6 @@ enum AnalogPort {
  * Provides access to BitMaker for micro: bit functionality.
  */
 //% color=190 icon="\uf126" block= "BitMaker"
-
 namespace BitMaker {
     /**
      * read the status of a digital input
