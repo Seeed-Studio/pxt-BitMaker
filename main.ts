@@ -193,7 +193,7 @@ namespace BitMaker {
     //% format.fieldEditor="gridpicker"
     //% format.fieldOptions.width=200
     //% format.fieldOptions.columns=3
-    //% yes.shadow="toggleHighLow"
+    //% yes.shadow="toggleYesNo"
     //% group="I2C"
     export function write_i2c(add: number, value: number, format: NumberFormat, yes: boolean) {
         pins.i2cWriteNumber(
