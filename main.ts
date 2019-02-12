@@ -168,7 +168,7 @@ namespace BitMaker {
     * Configure the period of Pulse Width Modulation (PWM) on the specified analog pin to a given value in "microseconds". Before you call this function, you should set the specified pin as analog output using "analog write pin".
     */
     //% blockId=config_PWM
-    //% block="analog set period pin $A_port|(PWM) to (us) $value"
+    //% block="analog set period /% pin $A_port|(PWM) to (us) $value"
     //% A_port.fieldEditor="gridpicker"
     //% A_port.fieldOptions.width=200
     //% A_port.fieldOptions.columns=3
