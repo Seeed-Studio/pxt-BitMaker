@@ -186,21 +186,31 @@ namespace BitMaker {
     }
 
     /**
-    * write one number to a 7-bit address
+    * Write one number to a 7-bit address
     */
     //% blockId=write_i2c
-    //% block="i2c wrtie number $| at address $add| with value $value| for format $format| repeated $yes"
+    //% block="i2c wrtie number $| at address $add| with value $value| of format $format| repeated $yes"
     //% format.fieldEditor="gridpicker"
     //% format.fieldOptions.width=200
     //% format.fieldOptions.columns=4
     //% yes.shadow="toggleYesNo"
     //% group="I2C"
     export function write_i2c(add: number, value: number, format: NumberFormat, yes: boolean) {
-        pins.i2cWriteNumber(
-            add,
-            value,
-            format,
-            yes
-        )
+        pins.i2cWriteNumber(add, value, format, yes)
     }
+
+    /**
+        * Read one number to a 7-bit address
+    */
+    //% blockId=read_i2c
+    //% block="i2c read number $| at address $add| with value $value| of format $format| repeated $yes"
+    //% format.fieldEditor="gridpicker"
+    //% format.fieldOptions.width=200
+    //% format.fieldOptions.columns=4
+    //% yes.shadow="toggleYesNo"
+    //% group="I2C"
+    export function read_i2c(add: number, format: NumberFormat, yes: boolean): number {
+        return pins.i2cReadNumber(add, format, yes)
+    }
+
 }
