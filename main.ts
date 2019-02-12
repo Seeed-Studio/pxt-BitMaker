@@ -25,7 +25,7 @@ enum AnalogPort {
  * Provides access to BitMaker for micro: bit functionality.
  */
 //% color=190 icon="\uf126" block= "BitMaker"
-//% groups="['Digital Pins', 'Analog Pins', 'I2C']"
+//% groups="['Analog', 'Digital', 'I2C']"
 namespace BitMaker {
     /**
      * read the status of a digital input
@@ -37,7 +37,7 @@ namespace BitMaker {
     //% Din.fieldOptions.columns=3
     //% high.shadow="toggleHighLow"
     //% high.defl="true"
-    //% group="Digital Pins"
+    //% group="Digital"
     export function read_Din(Din: GrovePort, high: boolean): boolean {
         let Din_stat: number;
         if (Din == GrovePort.P0) {
@@ -67,7 +67,7 @@ namespace BitMaker {
     //% Din.fieldEditor="gridpicker"
     //% Din.fieldOptions.width=200
     //% Din.fieldOptions.columns=3
-    //% group="Digital Pins"
+    //% group="Digital"
     export function read_Din_value(Din: GrovePort): number {
         let Din_stat: number;
         if (Din == GrovePort.P0) {
@@ -95,7 +95,7 @@ namespace BitMaker {
     //% Dout.fieldOptions.columns=3
     //% high.shadow="toggleHighLow"
     //% high.defl="true"
-    //% group="Digital Pins"
+    //% group="Digital"
     export function set_Dout(Dout: GrovePort, high: boolean) {
         let Dout_stat: number;
         if (high == true) {
@@ -125,8 +125,8 @@ namespace BitMaker {
     //% Ain.fieldEditor="gridpicker"
     //% Ain.fieldOptions.width=200
     //% Ain.fieldOptions.columns=3
-    //% group="Analog Pins"
-    //% weight=9
+    //% group="Analog"
+    //% weight=10
     export function read_Ain(Ain: AnalogPort): number {
         let Ain_value: number;
         if (Ain == AnalogPort.P0) {
@@ -149,7 +149,7 @@ namespace BitMaker {
     //% A_port.fieldOptions.columns=3
     //% value.min=0 value.max=1023
     //% value.defl=1023
-    //% group="Analog Pins"
+    //% group="Analog"
     //% weight=10
     export function write_analog(A_port: AnalogPort, value: number) {
         if (A_port == AnalogPort.P0) {
