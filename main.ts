@@ -163,4 +163,25 @@ namespace BitMaker {
             pins.analogWritePin(AnalogPin.P2, value);
         }
     }
+
+    /**
+    * Configure the period of Pulse Width Modulation (PWM) on the specified analog pin to a given value in "microseconds". Before you call this function, you should set the specified pin as analog output using "analog write pin".
+    */
+    //% blockId=config_PWM
+    //% block="analog set period /% pin $A_port|(PWM) to (us) $value"
+    //% A_port.fieldEditor="gridpicker"
+    //% A_port.fieldOptions.width=200
+    //% A_port.fieldOptions.columns=3
+    //% value.defl=20000
+    //% group="Analog"
+    //% weight=9
+    export function config_PWM(A_port: AnalogPort, value: number) {
+        if (A_port == AnalogPort.P0) {
+            pins.analogSetPeriod(AnalogPin.P0, value);
+        } else if (A_port == AnalogPort.P1) {
+            pins.analogSetPeriod(AnalogPin.P1, value);
+        } else if (A_port == AnalogPort.P2) {
+            pins.analogSetPeriod(AnalogPin.P2, value);
+        }
+    }
 }
