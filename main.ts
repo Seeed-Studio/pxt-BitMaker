@@ -28,39 +28,7 @@ enum AnalogPort {
 //% groups="['Analog', 'Digital', 'I2C']"
 namespace BitMaker {
     /**
-     * read the status of a digital input
-     */
-    //% blockId=read_Din
-    //% block="digital pin $Din| is %high"
-    //% Din.fieldEditor="gridpicker"
-    //% Din.fieldOptions.width=200
-    //% Din.fieldOptions.columns=3
-    //% high.shadow="toggleHighLow"
-    //% high.defl="true"
-    //% group="Digital"
-    export function read_Din(Din: GrovePort, high: boolean): boolean {
-        let Din_stat: number;
-        if (Din == GrovePort.P0) {
-            Din_stat = pins.digitalReadPin(DigitalPin.P0);
-        } else if (Din == GrovePort.P1) {
-            Din_stat = pins.digitalReadPin(DigitalPin.P1);
-        } else if (Din == GrovePort.P2) {
-            Din_stat = pins.digitalReadPin(DigitalPin.P2);
-        } else if (Din == GrovePort.P8) {
-            Din_stat = pins.digitalReadPin(DigitalPin.P8);
-        } else if (Din == GrovePort.P16) {
-            Din_stat = pins.digitalReadPin(DigitalPin.P16);
-        }
-
-        if ((high == true && Din_stat == 1) || (high == false && Din_stat == 0)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * read the value of a digital input
+    * read the value of a digital input
      */
     //% blockId=read_Din_value
     //% block="digital read pin $Din"
@@ -86,6 +54,40 @@ namespace BitMaker {
     }
 
     /**
+     * read the status of a digital input
+     */
+    //% blockId=read_Din
+    //% block="digital pin $Din| is %high"
+    //% Din.fieldEditor="gridpicker"
+    //% Din.fieldOptions.width=200
+    //% Din.fieldOptions.columns=3
+    //% high.shadow="toggleHighLow"
+    //% high.defl="true"
+    //% group="Digital"
+    //% weight=10
+    export function read_Din(Din: GrovePort, high: boolean): boolean {
+        let Din_stat: number;
+        if (Din == GrovePort.P0) {
+            Din_stat = pins.digitalReadPin(DigitalPin.P0);
+        } else if (Din == GrovePort.P1) {
+            Din_stat = pins.digitalReadPin(DigitalPin.P1);
+        } else if (Din == GrovePort.P2) {
+            Din_stat = pins.digitalReadPin(DigitalPin.P2);
+        } else if (Din == GrovePort.P8) {
+            Din_stat = pins.digitalReadPin(DigitalPin.P8);
+        } else if (Din == GrovePort.P16) {
+            Din_stat = pins.digitalReadPin(DigitalPin.P16);
+        }
+
+        if ((high == true && Din_stat == 1) || (high == false && Din_stat == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
     * set the status of a digital output to high or low
     */
     //% blockId=set_Dout
@@ -96,6 +98,7 @@ namespace BitMaker {
     //% high.shadow="toggleHighLow"
     //% high.defl="true"
     //% group="Digital"
+    //% weight=10
     export function set_Dout(Dout: GrovePort, high: boolean) {
         let Dout_stat: number;
         if (high == true) {
