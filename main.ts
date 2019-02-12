@@ -38,7 +38,7 @@ namespace BitMaker {
     //% high.shadow="toggleHighLow"
     //% high.defl="true"
     //% group="Digital"
-    //% weight=80
+    //% weight=100
     export function read_Din(Din: GrovePort, high: boolean): boolean {
         let Din_stat: number;
         if (Din == GrovePort.P0) {
