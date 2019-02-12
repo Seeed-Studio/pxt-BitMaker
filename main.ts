@@ -203,7 +203,7 @@ namespace BitMaker {
         * Read one number to a 7-bit address
     */
     //% blockId=read_i2c
-    //% block="i2c read number $| at address $add| with value $value| of format $format| repeated $yes"
+    //% block="i2c read number $| at address $add| of format $format| repeated $yes"
     //% format.fieldEditor="gridpicker"
     //% format.fieldOptions.width=200
     //% format.fieldOptions.columns=4
