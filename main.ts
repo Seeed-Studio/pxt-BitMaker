@@ -168,7 +168,7 @@ namespace BitMaker {
     * Configure the period of Pulse Width Modulation (PWM) on the specified analog pin to a given value in "microseconds". Before you call this function, you should set the specified pin as analog output using "analog write pin".
     */
     //% blockId=config_PWM
-    //% block="analog set period /% pin $A_port|(PWM) to (us) $value"
+    //% block="analog set period pin $A_port|(PWM) to (us) $value"
     //% A_port.fieldEditor="gridpicker"
     //% A_port.fieldOptions.width=200
     //% A_port.fieldOptions.columns=3
@@ -183,5 +183,24 @@ namespace BitMaker {
         } else if (A_port == AnalogPort.P2) {
             pins.analogSetPeriod(AnalogPin.P2, value);
         }
+    }
+
+    /**
+    * write one number to a 7-bit address
+    */
+    //% blockId=write_i2c
+    //% block="i2c wrtie number at address $add| with value $value| for format $format| repeated $yes"
+    //% format.fieldEditor="gridpicker"
+    //% format.fieldOptions.width=200
+    //% format.fieldOptions.columns=3
+    //% yes.shadow="toggleHighLow"
+    //% group="I2C"
+    export function write_i2c(add: number, value: number, format: NumberFormat, yes: boolean) {
+        pins.i2cWriteNumber(
+            add,
+            value,
+            format,
+            yes
+        )
     }
 }
