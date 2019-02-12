@@ -189,7 +189,7 @@ namespace BitMaker {
     * write one number to a 7-bit address
     */
     //% blockId=write_i2c
-    //% block="i2c wrtie number at address $add| with value $value| for format $format| repeated $yes"
+    //% block="i2c wrtie number $| at address $add| with value $value| for format $format| repeated $yes"
     //% format.fieldEditor="gridpicker"
     //% format.fieldOptions.width=200
     //% format.fieldOptions.columns=4
