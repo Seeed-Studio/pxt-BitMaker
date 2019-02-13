@@ -129,7 +129,7 @@ namespace BitMaker {
     //% Ain.fieldOptions.width=200
     //% Ain.fieldOptions.columns=3
     //% group="Analog"
-    //% weight=10
+    //% weight=50
     export function read_Ain(Ain: AnalogPort): number {
         let Ain_value: number;
         if (Ain == AnalogPort.P0) {
@@ -143,6 +143,28 @@ namespace BitMaker {
     }
 
     /**
+    * read the analog inputs and convert the value to the specified range
+    */
+    //% blockId=convert_Ain
+    //% block="map pin $Ain|to low $low_value|high $high_value"
+    //% Ain.fieldEditor="gridpicker"
+    //% Ain.fieldOptions.width=200
+    //% Ain.fieldOptions.columns=3
+    //% group="Analog"
+    //% weight=40
+    export function convert_Ain(Ain: AnalogPort, low_value: number, high_value: number): number {
+        let Ain_value: number;
+        if (Ain == AnalogPort.P0) {
+            Ain_value = pins.analogReadPin(AnalogPin.P0);
+        } else if (Ain == AnalogPort.P1) {
+            Ain_value = pins.analogReadPin(AnalogPin.P1);
+        } else if (Ain == AnalogPort.P2) {
+            Ain_value = pins.analogReadPin(AnalogPin.P2);
+        }
+        return Math.map(Ain_value, 0, 1023, low_value, high_value);
+    }
+
+    /**
     * write value to the analog ports
     */
     //% blockId=write_analog
@@ -153,7 +175,7 @@ namespace BitMaker {
     //% value.min=0 value.max=1023
     //% value.defl=1023
     //% group="Analog"
-    //% weight=10
+    //% weight=30
     export function write_analog(A_port: AnalogPort, value: number) {
         if (A_port == AnalogPort.P0) {
             pins.analogWritePin(AnalogPin.P0, value);
@@ -174,7 +196,7 @@ namespace BitMaker {
     //% A_port.fieldOptions.columns=3
     //% value.defl=20000
     //% group="Analog"
-    //% weight=9
+    //% weight=20
     export function config_PWM(A_port: AnalogPort, value: number) {
         if (A_port == AnalogPort.P0) {
             pins.analogSetPeriod(AnalogPin.P0, value);
