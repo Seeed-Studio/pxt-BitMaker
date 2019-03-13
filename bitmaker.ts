@@ -75,7 +75,7 @@ namespace BitMaker {
         if (high) {
             pins.digitalWritePin(<DigitalPin>port, 1);
         } else {
-            pins.digitalWritePin(<DigitalPin>port) Dout_stat);
+            pins.digitalWritePin(<DigitalPin>port, 0);
         }
     }
 
