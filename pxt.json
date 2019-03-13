@@ -1,13 +1,13 @@
 {
     "name": "BitMaker",
-    "version": "0.0.2",
+    "version": "0.0.0",
     "description": "",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "bitmaker.ts"
     ],
     "testFiles": [
         "test.ts"
